@@ -1,8 +1,8 @@
-const logout = document.querySelector("#Logout");
+const logout = document.querySelector("#logout_btn");
 logout.addEventListener("click", e => {
   e.preventDefault();
   auth.signOut();
-  window.location.replace("../Signup/form.html");
+  window.location.replace("../login.html");
 });
 
 firebase.auth().onAuthStateChanged(user => {
@@ -17,6 +17,6 @@ firebase.auth().onAuthStateChanged(user => {
         document.getElementById("User").innerHTML = info;
       });
   } else {
-    window.location.replace("../Signup/form.html");
+    window.location.replace("../login.html");
   }
 });
