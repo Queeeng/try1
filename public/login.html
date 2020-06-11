@@ -46,6 +46,18 @@
 </head>
 
 <body data-spy="scroll">
+<style type="text/css" media="all">
+  .fail{
+    display:none;
+    background-color:#ffaa1d;
+    color:;
+    width:100%;
+    text-align:center;
+    font-weight:bold;
+  }
+</style>
+  
+</style>
 <!-- End Preload -->
 <div class="animation-element">
     <!-- End Pre-Loader -->
@@ -114,7 +126,7 @@
             <!-- Breadcrumb section End -->
           </div>
         </div>
-      </div>
+      </div>  
     </section>
     <!--Header section end-->
 
@@ -129,11 +141,14 @@
                     <div class="login-header text-center">
                       <h6>Login Form</h6>
                     </div>
-                        <br>                        
+                        <br>   
+                    <div class="fail" id="fail" >
+                      
+                    </div>
                                                 
                         <div class="login-form"> 
                         <form class="form-horizontal" id="LoginForm">
-                            <input type="text" name="username" id="username" required="" placeholder="Enter your User Name">     
+                            <input type="text" name="Email" id= "email" required="" placeholder="Enter your Email">     
                             <input type="password" name="password" id="password" required="" placeholder="Enter your Password">
 
                            <input value="Login" type="submit" name="login">
@@ -382,7 +397,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
 <script src="All.js"></script>
 <script src="Login.js"></script>
-<script src="Signup.js"></script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

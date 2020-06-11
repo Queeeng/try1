@@ -9,20 +9,37 @@ loginForm.addEventListener("submit", (e) => {
   const email = loginForm["email"].value;
   const password = loginForm["password"].value;
 
+
+
   // log the user in
   auth
     .signInWithEmailAndPassword(email, password)
 
     .then((user) => {
-      if (user) {
-        console.log(user);
-        window.location.replace("/Dashboard/dashboard.html");
+      var user = firebase.auth().currentUser;
+      
+      
+      if (user != null) {
+        name = user.displayName;
+        emailVerified = user.emailVerified;
+        console.log(emailVerified);
+        if (emailVerified) {
+          document.querySelector(".fail").style.display = "block"
+          document.getElementById("fail").innerHTML = "Successful";
+          window.location.replace("Dashboard/dashboard.html");
+        } else {
+          document.getElementById("fail").innerHTML = "Please verify your email address.";
+          setTimeout(() => {
+            document.querySelector(".fail").style.display = "block";
+          }, 3000);
+        }
       } else {
-        showalert();
-        document.querySelector("#fail").innerHTML = error.message;
+        window.location.replace("login.html");
       }
+      
     })
     .catch((error) => {
+      document.querySelector(".fail").style.display = "block"
       document.getElementById("fail").innerHTML = error.message;
       console.log(error.message);
     });
@@ -36,6 +53,10 @@ auth.onAuthStateChanged((user) => {
   } else {
   }
 });
+
+
+
+
 
 function getUserData(uid) {
   firebase

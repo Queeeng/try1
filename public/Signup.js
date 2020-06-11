@@ -39,10 +39,13 @@ signupForm.addEventListener("submit", e => {
     signupForm.reset();
     redirect();
   }
+  
+  
 
   function redirect() {
-    window.location.replace("Dashboard/dashboard.html");
+    window.location.replace("verify_email.html");
   }
+
 
   function writeUserData(user) {
     db.ref("users/" + localStorage.uid)
