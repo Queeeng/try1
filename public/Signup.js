@@ -53,6 +53,7 @@ signupForm.addEventListener("submit", e => {
 
       .catch(error => {
         console.log(error.message);
+        document.querySelector("signup_error_message_display").innerHTML = error.message;
       });
 
     clearform();
