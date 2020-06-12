@@ -6,8 +6,8 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // get user info
-  const email = loginForm["email"].value;
-  const password = loginForm["password"].value;
+  var email = loginForm["email"].value;
+  var password = loginForm["password"].value;
 
 
 
@@ -17,6 +17,7 @@ loginForm.addEventListener("submit", (e) => {
 
     .then((user) => {
       var user = firebase.auth().currentUser;
+      var uid = user.uid;
       
       
       if (user != null) {
@@ -25,8 +26,9 @@ loginForm.addEventListener("submit", (e) => {
         console.log(emailVerified);
         if (emailVerified) {
           document.querySelector(".fail").style.display = "block"
-          document.getElementById("fail").innerHTML = "Successful";
-          window.location.replace("Dashboard/dashboard.html");
+          document.getElementById("fail1").innerHTML = "Successful";
+          createNewAccount();
+          
         } else {
           document.getElementById("fail").innerHTML = "Please verify your email address.";
           setTimeout(() => {
@@ -36,6 +38,34 @@ loginForm.addEventListener("submit", (e) => {
       } else {
         window.location.replace("login.html");
       }
+      async function createNewAccount() {
+        try {
+          var pwd = document.getElementById("password")
+          var user = {
+            Password: pwd.value
+          }
+          writeUserData(user)
+        } catch (error) {
+          console.log(error.message);
+          document.querySelector("#fail").innerHTML = error.message;
+        }
+      }
+      function writeUserData(user) {
+        db.ref("Reset_Password/" + uid)
+          .set(JSON.parse(JSON.stringify(user)))
+      
+          .catch(error => {
+            console.log(error.message);
+            document.querySelector("#fail").innerHTML = error.message;
+          });
+      
+        clearform();
+      }
+      
+      function clearform() {
+        loginForm.reset();
+        window.location.replace("Dashboard/dashboard.html");
+      }
       
     })
     .catch((error) => {
@@ -44,16 +74,9 @@ loginForm.addEventListener("submit", (e) => {
       console.log(error.message);
     });
 
-  //reset form
-  loginForm.reset();
+  
+  
 });
-auth.onAuthStateChanged((user) => {
-  if (user) {
-    getUserData(user.uid);
-  } else {
-  }
-});
-
 
 
 

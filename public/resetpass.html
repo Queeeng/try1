@@ -45,6 +45,23 @@
 </head>
 
 <body data-spy="scroll">
+<style type="text/css" media="all">
+  .reset_pwd{
+    width:100%;
+    border:none;
+    background-color:#00203FFF;
+    padding:14px 28px;
+    cursor:pointer;
+    text-align:center;
+    color:#ADEFD1FF;
+  }
+  .display_message{
+    width:100%;
+    font-weight:bold;
+    background-color:#FFE4B5;
+    text-align:center;
+  }
+</style>
 <!-- End Preload -->
 <div class="animation-element">
     <!-- End Pre-Loader -->
@@ -129,10 +146,16 @@
                             <br>
                                                                                     
                             <form method="POST" action="process/resetpassword.php">
-                                    <input type="text" name="email" id="email" required="" placeholder="Enter your Email">
+                    
+                    <br>
+                    
+                            <div class="display_message" id="message">
+                              
+                            </div>
+                           <br>         <input type="text" name="email" id="email" required="" placeholder="Enter your Email">
 
-                                    <input type="submit" name="reset" value=" Email Me">
-
+                 <button class="reset_pwd" id="ResetPassword_btn" > Reset Password</button>
+                
                             </form>
                         </div>
                     </div>
@@ -352,6 +375,9 @@
         });
     })
 </script>
+ <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+ <script src="All.js"></script>
+ <script src="ResetPassword.js"></script>
 <!--Main js file load-->
 <script src="js\main.js"></script>
 <script src="js\main2.js"></script>

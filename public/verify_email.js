@@ -16,7 +16,7 @@ Verify_btn.addEventListener("click", e => {
       if (emailVerified) {
         Verification_msg_sent.innerHTML = ""
       } else {
-        Verification_msg_sent.innerHTML = "A verification email has been sent to your email address"
+        Verification_msg_sent.innerHTML = "A verification email will be sent to your email address shortly"
       }
     }
     
