@@ -9,7 +9,7 @@
     <!--Favicon add-->
     <link rel="shortcut icon" type="image/png" href="../images/fav.png">
     <!--bootstrap Css-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!--font-awesome Css-->
     <link href="../font2/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -39,6 +39,7 @@
         }
     </style>
     <script src="../js/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style2.css">
 
@@ -122,40 +123,16 @@
 <!---------    navber ----------------->
 <br>
   
-     <div class="container">
- 	
-       
-         
-
-        <div class="alert alert-success alert-dismissible">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-  <!--Bitcoin address: <strong>1GiJE4TQrfCs7NX4JmBBLizw48Vt2Cefwq</strong>-->
-  Email us at <strong>deposit@EPFXTRADING.com </strong>for payment.
-</div>
-                
+            
           
-    
-		
-		
-		
-		 
-        </div>
-              
-    
-    
-                  
-    	    
-    
- 
-    
-  
   
  <br> 
  
  
  
  
-    <form method="post"	id="newinvestment_form" action="" enctype="multipart/form-data" style="background-color:#fff; padding:20px; margin-top:10px;">
+ <div id="page-wrapper" style="min-height: 564px;">
+    <form method="post" id="newinvestment_form" action="" enctype="multipart/form-data" style="background-color:#fff; padding:20px; margin-top:10px;">
             <div class="sign-u">
                 <div class="sign-up1">
                     <label>CONFIRM SUBSCRIPTION PLAN</label>
@@ -169,7 +146,7 @@
                     <label>Confirm Investment Plan:</label>
                 </div>
                 <div class="sign-up2">
-                <select id="Investment"	name="payment_mode" style="height:40px;">
+                <select id="Investment" name="payment_mode" style="height:40px;">
                     <option value="Bank transfer">Basic	Plan</option>
                     <option value="Ethereum">Silver	Plan</option>
                     <option value="Bitcoin">Gold	Plan</option>
@@ -248,7 +225,7 @@
                                                 <div class="panel panel-default" style="border:0px solid #fff;">
                         <!-- Panel Heading Starts -->
                         <h4>
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#"btc>
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#" btc="">
                             <strong>Bitcoin</strong>
                             <img src="../images/btc.png" width="60px;" height="60px;">
                             </a>
@@ -276,13 +253,13 @@
                 
                 <div class="clearfix"> </div>
             </div>
-                            <form method="post" action="" enctype="multipart/form-data" style="background-color:#fff; padding:20px; margin-top:10px;">
+                            
             <div class="sign-u">
                 <div class="sign-up1">
                     <label>UPLOAD SCREENSHOT OF PAYMENT PROOF AFTER PAYMENT</label>
                 </div>
                 <div class="sign-up2">
-                    <input type="file" name="ifile" required>
+                    <input type="file" name="ifile" required="">
                 </div>
                 <div class="clearfix"> </div>
             </div><br>
@@ -292,7 +269,7 @@
                     <label>Payment mode:</label>
                 </div>
                 <div class="sign-up2">
-                <select id="currency"	name="payment_mode" style="height:40px;">
+                <select id="currency" name="payment_mode" style="height:40px;">
                     <!--<option value="Bank transfer">Bank transfer</option>-->
                     <option value="Ethereum">Ethereum</option>
                     <option value="Bitcoin">Bitcoin</option>
@@ -306,10 +283,9 @@
                 <div class="clearfix"> </div>
             </div>
             <input type="hidden" name="amount" value="">
-        </form>
-    </div>
+        
+    </div></form>
 </div>
- 
  
     
     
