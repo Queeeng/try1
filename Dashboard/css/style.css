@@ -2070,28 +2070,7 @@ ul.dropdown-menu{
 }
 /*--//side-menu--*/
 /* ----Logo----*/
-.logo {
-    background: #555;
-    text-align: center;
-    float: left;
-}
-.logo a{
-    padding: 0.9em 3.3em .7em;
-	display: block;
-	text-decoration: none;
-}
-.logo a h1 {
-    color: #fff;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    font-weight: 700;
-}
-.logo a span {
-    color: #F8F8F8;
-    font-size: .7em;
-    text-align: center;
-    letter-spacing: 7px;
-}
+
 /* ----//Logo----*/
 
 .input__label {
