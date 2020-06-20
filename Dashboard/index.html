@@ -145,21 +145,26 @@
 				<div	id="newinvestment_form" class="row-one" style="margin-top:10px;">
 					<div id="td51"	name="Invest_capital"	class="col-md-4 rp" style="background-color:darkred;border-radius:6px; padding-top: 20px; padding-bottom: 20px;">
 						<h4>
-														<span 	style="color:white;font-weight:bold">$0.00</span><br>
+														<span 	style="color:white;font-weight:bold" id=""></span>
+														<p id="DepositID" style="color:white; font-size:24px">$0</p>
 							<small id="dep"	style="color:white">Deposits</small>
 													</h4>
 					</div>
 					
 					<div id="td52"	name="Bal"	class="col-md-4 rp" style="background-color:#876E4D;border-radius:6px; padding-top: 20px; padding-bottom: 20px;">
-										<h4 style="color:white">$0.00 <br><small id="bal"	style="color:white">Balance</small></h4>
+					  
+					  <p id="BalanceID" style="color:white; font-size:24px">$0</p>
+										<h4 id="" ><small id="bal"	style="color:white">Balance</small></h4>
 										</div>
 
 					<div id="td53"	name="Profit"	class="col-md-4 rp" style="background-color:#876E4D;border-radius:6px; padding-top: 20px; padding-bottom: 20px;">
-										<h4 style="color:white">$0.00 <i class="fa fa-arrow-up" style="color:limegreen; font-size:12px;"></i><br><small id="pro"	style="color:white">Profit</small></h4>
+					  <p id="ProfitID" style="color:white; font-size:24px">$0</p>
+										<h4 id="" style="color:white"><i class="fa fa-arrow-up" style="color:limegreen; font-size:12px;"></i><small id="pro"	style="color:white">Profit</small></h4>
 										</div>
 					
 					<div id="td54"	name="cre"	class="col-md-4 rp" style="background-color:#876E4D;border-radius:6px; padding-top: 20px; padding-bottom: 20px;">
-										<h4 style="color:white">$0.00 <br><small	id="cre" style="color:white">Credit</small></h4>
+					  <p id="CreditID"style="color:white; font-size:24px">$0</p>
+										<h4 id="" style="color:white; "><small	id="cre" style="color:white">Credit</small></h4>
 										</div>
 					
 					
@@ -244,10 +249,10 @@
    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
-   <script src="All.js"></script>
+   <script src="../All.js"></script>
+   
    <script src="Logout.js"></script>
    <script src="dashboard.js"></script>
-   <script src="dash.js"></script>
-   <!-- <script src=""></script>-->
+      <!-- <script src=""></script>-->
 
 	</body></html>
