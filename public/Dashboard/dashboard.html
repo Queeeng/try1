@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="logo">
-                    <a href="index.html"><img src="../images/logo2.png" style="max-height:60px;"></a>
+                    <a href="index.html"><img src="../images/logo3.jpeg" style="max-height:60px;"></a>
                 </div>
             </div>
             <div class="col-md-9 text-right">
@@ -72,7 +72,7 @@
                             <ul class="mega-menu mega-menu1 mega-menu2 menu-postion-4">
                                 <li class="mega-list mega-list1">
                              
-                                    <button id="logout_btn" class="page-scroll">Logout</button>
+                                    <a class="page-scroll" id="Logout">Logout</a>
                                    
                             </ul>
                         </li>
@@ -92,7 +92,7 @@
             </div>
             <div class="col-md-6 text-right bounceIn">
                 <div class="contact-admin">
-                 <a href="#"> <i class="fa fa-user" aria-hidden="true"></i></a>
+                 <a id="User's_Name" class="Username"  href="#" style="font-size:15px; font-weight:bold; color:#fff;"> <i class="fa fa-user" aria-hidden="true"></i></a>
                      <!--  <a href="#"> <i class="fa fa-money" aria-hidden="true"></i> </a>
                     <div class="support-bar-social-links">
                                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -372,9 +372,6 @@ new TradingView.widget({
             });
         })
     </script>
-  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
-  <script src="All.js"></script>
-  <script src="Logout.js"></script>
 <!--Main js file load-->
 <script src="../js/main.js"></script>
 <script src="../js/main2.js"></script>
@@ -390,5 +387,11 @@ hljs.configure({useBR: true});
 jQuery('#raindrops').raindrops({color:'#fff',canvasHeight:5});
 jQuery('#raindrops-green').raindrops({color:'#EEA640 ',canvasHeight:5});
 </script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+<script src="../All.js"></script>
+<script src="Logout.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>
