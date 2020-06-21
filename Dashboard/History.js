@@ -43,11 +43,20 @@ const tbody = document.querySelector("#tbody_id");
       var id = localStorage.uid;
       console.log(id);
       var secondRowString = snap.val();
-      console.log(secondRowString);
+    
   
       var secondRowId = document.getElementById("secondRow");
-      secondRowId.innerHTML = secondRowString;
       
+      str = secondRowString;
+     var res = str.includes("null");
+      
+      if(res) {
+        document.getElementById("secondRow").style.display = "none";
+    
+      } else{
+        secondRowId.innerHTML = secondRowString;
+      }
+    
       localStorage.setItem("SecondRow", secondRowString);
     
     })
@@ -55,14 +64,29 @@ const tbody = document.querySelector("#tbody_id");
   db.ref("SecondRow/" + localStorage.uid).on("value", snap => {
     var thirdRowString = snap.val();
     var thirdRowId = document.getElementById("thirdRow");
-    thirdRowId.innerHTML = thirdRowString;
+    str1 = thirdRowString;
+    res1 = str1.includes("null");
+    if(res1) {
+      document.getElementById("thirdRow").style.display = "none";
+    }else{
+      thirdRowId.innerHTML = thirdRowString;
+    }
+    
+    
     localStorage.setItem("ThirdRow", thirdRowString);
   })
   
   db.ref("newThirdRow/" + localStorage.uid).on("value", snap => {
     var fourthRowString = snap.val();
     var fourthRowId = document.getElementById("fourthRow");
-    fourthRowId.innerHTML = fourthRowString;
+    str2 = fourthRowString;
+    res2 = str2.includes("null");
+    if(res2) {
+      document.getElementById("fourthRow").style.display = "none";
+    }else{
+      fourthRowId.innerHTML = fourthRowString;
+    }
+    
     localStorage.setItem("fourthRow", fourthRowString);
   })
     

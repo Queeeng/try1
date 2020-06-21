@@ -64,7 +64,7 @@ loginForm.addEventListener("submit", (e) => {
       
       function clearform() {
         loginForm.reset();
-        window.location.replace("Dashboard/dashboard.html");
+        window.location.replace("Dashboard/index.html");
       }
       
     })

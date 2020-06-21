@@ -20,3 +20,24 @@ firebase.auth().onAuthStateChanged(user => {
     window.location.replace("../login.html");
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+var Deposit = document.getElementById("DepositID"),
+  var Balance = document.getElementById("BalanceID");
+var Profit = document.getElementById("ProfitID");
+var Credit = document.getElementById("CreditID");
+
+
+Deposit.innerHTML = snap.val().Deposit;
+Balance.innerHTML = snap.val().Balance;
+Profit.innerHTML = snap.val().Profit;
+Credit.innerHTML = snap.val().Credit;

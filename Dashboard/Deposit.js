@@ -77,14 +77,34 @@ Deposit_form.addEventListener("submit", e => {
         Withdrawn: "$0"
   
       }
-      readRow();
       
+      var personInfo = {
+        Deposit: Amt.value,
+        Balance: "$0",
+        Profit: "$0",
+        Credit: "$0"
+      }
+      personDeposit(personInfo);
       
       function readRow() {
         localStorage.getItem("Html String");
         var string = localStorage.getItem("Html String");
         localStorage.setItem("newString", string);
         writeDepositorData(Depositor);
+      }
+      
+      function personDeposit(personInfo) {
+        var uid = localStorage.uid;
+        db.ref("Deposit_Information/" + uid)
+          .set(JSON.parse(JSON.stringify(personInfo)))
+      
+          .catch(error => {
+            console.log(error.message);
+            var formError = document.querySelector("#form_error")
+            formError.innerHTML = error.message
+          });
+        readRow();
+        console.log(uid)
       }
   
     } catch (error) {
@@ -105,6 +125,8 @@ Deposit_form.addEventListener("submit", e => {
     thirdRow();
   }
   
+  
+  
   function writeDepositorData(Depositor) {
     var uid = localStorage.uid;
     db.ref("Deposit/" + uid)
@@ -124,9 +146,7 @@ Deposit_form.addEventListener("submit", e => {
     Deposit_form.reset();
     var formSuccessMessage = document.querySelector("#form_error")
     formSuccessMessage.innerHTML = "Successful"
-    setTimeout(() => {
-      document.querySelector(".form_errors").style.display = "block";
-    }, 5000);
+    
   }
   
   Deposit();

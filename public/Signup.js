@@ -24,6 +24,8 @@ signupForm.addEventListener("submit", e => {
       writeUserData(user);
     } catch (error) {
       console.log(error.message);
+      var dis = document.getElementById("signup_error_message_display");
+      dis.innerHTML = error.message;
     }
   }
 
